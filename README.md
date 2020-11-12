@@ -53,7 +53,6 @@ $ sudo service mariadb restart
 ```
 
 Thereafter, you are ready to install the new functions via
-
 ```
 mysql> source MariaDBSpatialUDF.sql
 ```
