@@ -24,7 +24,6 @@ Below first line will prepare the Makefile and the other two will install it.
 $ cmake CMakeList.txt
 $ make
 $ make install
-$ mysql
 ```
 
 Before any further you need to check the plugin directory. Above code has just used mariadb-config for detecting the plugin directory and copy the compiled library to that directory. But if you have setup a binary version of MariaDB (instead of compling yourself) default plugin directory might be different. Therefore, first learn the plugin directory with:
@@ -54,6 +53,7 @@ $ sudo service mariadb restart
 
 Thereafter, you are ready to install the new functions via
 ```
+$ mysql
 mysql> source MariaDBSpatialUDF.sql
 ```
 
