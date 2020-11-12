@@ -16,4 +16,16 @@ The code is updated for
 - MariaDB 10.5.x
 - Proj 7.0.0
 - GEOS 3.8.0
+- I did not test on Windows
 
+### Compile and install
+$ cmake CMakeList.txt
+$ make
+$ make install
+$ mysql
+mysql> use <DATABASENAME>;
+mysql> source MariaDBSpatialUDF.sql
+  
+### Testing
+$ mysql
+mysql> source sql/tests.sql
