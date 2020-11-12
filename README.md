@@ -28,8 +28,10 @@ mysql> use <DATABASENAME>;
 mysql> source MariaDBSpatialUDF.sql
 ```
 
+
 ### Testing
 ```
 $ mysql
+mysql> use <DATABASENAME>;
 mysql> source sql/tests.sql
 ```
