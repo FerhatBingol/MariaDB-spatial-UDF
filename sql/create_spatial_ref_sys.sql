@@ -7,7 +7,7 @@
 	Albert Rovira has published this code under GPL so I follow the 
 	same license for the code and all rights are belong to him. 
 */
-
+ 
 DROP TABLE IF EXISTS spatial_ref_sys;
 
 CREATE TABLE spatial_ref_sys (
