@@ -7,7 +7,7 @@
 	Albert Rovira has published this code under GPL so I follow the 
 	same license for the code and all rights are belong to him. 
 */
-
+  
 /* Some basic tests ... */
 
 select CASE WHEN astext(transform(geomfromtext('POINT(2.1699187 41.387917)',4326),4326)) != 'POINT(2.1699187 41.387917)' 
