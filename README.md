@@ -9,5 +9,11 @@ Albert Rovira has published this code under GPL so I follow the same license for
 
 ## How to use the code
 
-See: https://github.com/krandalf75/MySQL-Spatial-UDF/blob/master/README.md
+Please, first do read: https://github.com/krandalf75/MySQL-Spatial-UDF/blob/master/README.md
+
+### My addition
+The code is updated for
+- MariaDB 10.5.x
+- Proj 7.0.0
+- GEOS 3.8.0
 
