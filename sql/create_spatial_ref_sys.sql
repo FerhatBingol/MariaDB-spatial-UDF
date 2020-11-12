@@ -1,9 +1,18 @@
+/* 	This code is original work of Albert Rovira (github user: krandalf75) 
+	see : https://github.com/krandalf75/MySQL-Spatial-UDF
+   	The code was last updated 8 years ago was only considering MySQL DB server
+	due to the fact that the ORACLE did not buy MySQL at the time and MariaDB was not existed. 
+	Therefore I have taken the liberty of hard-forking the code to make a clean start. 
+
+	Albert Rovira has published this code under GPL so I follow the 
+	same license for the code and all rights are belong to him. 
+*/
 
 DROP TABLE IF EXISTS spatial_ref_sys;
 
 CREATE TABLE spatial_ref_sys (
 srid INTEGER NOT NULL PRIMARY KEY,
-auth_name varchar(8) NOT NULL,
+auth_name varchar(24) NOT NULL,
 auth_srid INTEGER NOT NULL,
 ref_sys_name TEXT,
 proj4text TEXT NOT NULL,

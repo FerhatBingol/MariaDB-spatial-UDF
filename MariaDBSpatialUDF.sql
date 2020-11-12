@@ -7,9 +7,10 @@
 	Albert Rovira has published this code under GPL so I follow the 
 	same license for the code and all rights are belong to him. 
 */
+
 use mysql;
 
-source "sql/create_spatial_ref_sys.sql"
+source sql/create_spatial_ref_sys.sql
 
 /* UDF Functions and procedures */
 DROP FUNCTION IF EXISTS msudf_boundary;
@@ -39,31 +40,31 @@ DROP FUNCTION IF EXISTS msudf_union;
 DROP FUNCTION IF EXISTS msudf_within;
 
 
-CREATE FUNCTION  msudf_boundary					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_buffer					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_centroid					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_convexHull				RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_contains					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_crosses					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_difference				RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_disjoint					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_intersection				RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_intersects				RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_isEmpty					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_isSimple					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_isRing					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_lineMerge				RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_lineSubstring			RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_overlaps					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_pointOnSurface			RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_reverse					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_simplify					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_simplifyPreserveTopology	RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_symDifference			RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_touches					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_transform				RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_union					RETURNS STRING SONAME "libMariaDBSpatialUDF.so";
-CREATE FUNCTION  msudf_within					RETURNS INTEGER SONAME "libMariaDBSpatialUDF.so";
+CREATE FUNCTION  msudf_boundary					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_buffer					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_centroid					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_convexHull				RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_contains					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_crosses					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_difference				RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_disjoint					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_intersection				RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_intersects				RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_isEmpty					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_isSimple					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_isRing					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_lineMerge				RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_lineSubstring			RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_overlaps					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_pointOnSurface			RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_reverse					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_simplify					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_simplifyPreserveTopology	RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_symDifference			RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_touches					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_transform				RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_union					RETURNS STRING SONAME 'libMariaDBSpatialUDF.so';
+CREATE FUNCTION  msudf_within					RETURNS INTEGER SONAME 'libMariaDBSpatialUDF.so';
 
 
 /* SQL Functions and procedures */
@@ -174,4 +175,4 @@ CREATE FUNCTION lineMerge(geom GEOMETRY) returns geometry DETERMINISTIC return m
 
 /* Some basic tests ... */
 
-source "sql/tests.sql"
+source sql/tests.sql
