@@ -18,20 +18,44 @@ The code is updated for
 - GEOS 3.8.0
 - I did not test on Windows
 
-### Compile and install
+### Compile, install and test
+Below first line will prepare the Makefile and the other two will install it.  
 ```
 $ cmake CMakeList.txt
 $ make
 $ make install
 $ mysql
-mysql> use <DATABASENAME>;
+```
+
+Before any further you need to check the plugin directory. Above code has just used mariadb-config for detecting the plugin directory and copy the compiled library to that directory. But if you have setup a binary version of MariaDB (instead of compling yourself) default plugin directory might be different. Therefore, first learn the plugin directory with:
+
+```
+$ mariadb-config --plugindir
+```
+which returns /usr/lib/x86_64-linux-gnu/libmariadb3/plugin on Ubuntu 20.04 with MariaDB 10.5.7. To set this plugin directory you need to find and edit the default my.cnf config file with
+
+```
+$ locate my.cnf  # return /etc/mysql/my.cnf
+$ sudo nano /etc/mysql/my.cnf
+```
+
+and add this to the end of the config file
+
+```
+[mysqld]
+plugin_dir=/usr/lib/x86_64-linux-gnu/libmariadb3/plugin
+```
+
+Now, save, exit and restart mariadb server
+
+```
+$ sudo service mariadb restart
+```
+
+Thereafter, you are ready to install the new functions via
+
+```
 mysql> source MariaDBSpatialUDF.sql
 ```
 
 
-### Testing
-```
-$ mysql
-mysql> use <DATABASENAME>;
-mysql> source sql/tests.sql
-```

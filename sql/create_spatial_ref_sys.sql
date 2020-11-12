@@ -30,11 +30,6 @@ replace(ref_sys_name,'''','''''') || ''',''' ||
 replace(proj4text,'''','''''') || ''',''' ||
 replace(srtext,'''','''''') || ''');' as sql from spatial_ref_sys
 
-Ferhat Bingöl : You can import this file into your MariaDB database via:
-$ mysql
-mysql > use <YOUR_DB_NAME_HERE>
-mysql > source create_spatial_ref_sys.sql
-
 
 */
 insert into spatial_ref_sys (srid,auth_name,auth_srid,ref_sys_name,proj4text,srs_wkt) values ('-1','NONE','-1','Undefined - Cartesian','','Undefined');

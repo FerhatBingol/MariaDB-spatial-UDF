@@ -10,7 +10,7 @@
 
 use mysql;
 
-source "sql/create_spatial_ref_sys.sql"
+source sql/create_spatial_ref_sys.sql
 
 /* UDF Functions and procedures */
 DROP FUNCTION IF EXISTS msudf_boundary;
@@ -175,4 +175,4 @@ CREATE FUNCTION lineMerge(geom GEOMETRY) returns geometry DETERMINISTIC return m
 
 /* Some basic tests ... */
 
-source "sql/tests.sql"
+source sql/tests.sql
