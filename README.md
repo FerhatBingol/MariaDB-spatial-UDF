@@ -57,4 +57,6 @@ $ mysql
 mysql> source MariaDBSpatialUDF.sql
 ```
 
+### Usage of binary release
+Move library to your plugin directory and run the mysql command above
 
