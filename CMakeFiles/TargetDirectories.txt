@@ -1,8 +1,0 @@
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/install/strip.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/install/local.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/install.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/list_install_components.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/rebuild_cache.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/edit_cache.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/uninstall.dir
-/home/enerji/dev/spatialUDF/MariaDB-spatial-UDF/CMakeFiles/MSUDF.dir
